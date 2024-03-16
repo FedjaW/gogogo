@@ -9,3 +9,9 @@ Ist ein string immutable?
 Was genau ist der Unterschied zwischen
 
 `type a int32` und `type a = int32`
+
+# Functions vs Methods
+
+Go differentiates between functions and methods.
+
+- [ ] be able to explain the difference
