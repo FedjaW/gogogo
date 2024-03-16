@@ -15,3 +15,8 @@ type Course struct {
 func (c Course) String() string {
 	return fmt.Sprintf("name: %v, duration %v", c.Name, c.Duration)
 }
+
+// to demonstrate interfaces
+func (course Course) SignUp() bool {
+	return true
+}

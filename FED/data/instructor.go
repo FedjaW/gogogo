@@ -14,7 +14,6 @@ func (instructor Instructor) PrintName() {
 
 // there is no pattern to define a constructor
 // but there are factories
-
 func NewInstructor(name string) Instructor {
 	return Instructor{Name: name}
 }
