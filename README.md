@@ -1,4 +1,5 @@
 # gogogo
+
 gooooooooooooooo
 
 **Init a go module**
@@ -19,3 +20,5 @@ In js a const is a immutable variable.
 
 A constant will tell the compiler to copy the given initial value and paste it. (very simplified)
 
+**read the doc**
+`go doc <package> <method>`
