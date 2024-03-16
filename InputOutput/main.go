@@ -26,7 +26,18 @@ func calcTax2(price float32) (a float32, b float32) {
 
 var newPrice = 99
 
+func birthday(age *int) {
+	if *age > 110 {
+		panic("To old to be true")
+	}
+	fmt.Printf("Thi is a pointer %v and this the value %v\n", age, *age)
+	*age++
+}
+
 func main() {
+	defer fmt.Println("Bye")
+	defer fmt.Println("Good")
+
 	message := "Hello from Go"
 	var price int = 12
 	fmt.Println(message, price, newPrice)
@@ -39,4 +50,10 @@ func main() {
 
 	result2, _ := calcTax2(12.0)
 	fmt.Println(result2)
+
+	age := 22
+	birthday(&age)
+	fmt.Println(age)
+	fmt.Println(&age)
+	fmt.Println(*&age)
 }
