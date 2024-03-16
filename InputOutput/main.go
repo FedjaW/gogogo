@@ -15,13 +15,13 @@ func init() {
 }
 
 func calcTax(price float32) (float32, float32) {
-	return price*0.9, price*0.2
+	return price * 0.9, price * 0.2
 }
 
 func calcTax2(price float32) (a float32, b float32) {
-	a = price*0.9
-	b = price*0.2
-	return 
+	a = price * 0.9
+	b = price * 0.2
+	return
 }
 
 var newPrice = 99

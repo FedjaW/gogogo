@@ -4,7 +4,7 @@ gooooooooooooooo
 
 **Init a go module**
 
-`go mod ini <name>`
+`go mod init <name>`
 
 **Run (it will search for the entrypoint main func in all files in the module)**
 
@@ -24,3 +24,11 @@ A constant will tell the compiler to copy the given initial value and paste it. 
 `go doc <package> <method>`
 
 **BTW** .... `this` is not a keyword in go. I am in heaven, beautiful, I LOVE IT!
+
+**FormatOnSave in VSC**
+
+"[go]": {
+"editor.insertSpaces": true,
+"editor.formatOnSave": true,
+"editor.defaultFormatter": "golang.go"
+},

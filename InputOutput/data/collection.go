@@ -3,7 +3,8 @@ package data
 import "fmt"
 
 var Countries [10]string
-var WellKnownPorts = map[string]int { "http": 80 }
+var WellKnownPorts = map[string]int{"http": 80}
+
 // var codes map[int]string
 
 func init() {
