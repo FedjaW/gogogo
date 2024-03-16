@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 
+	"leckomio.dev/go/files/data"
 	"leckomio.dev/go/files/fileutils"
 )
 
@@ -22,4 +23,6 @@ func main() {
 
 	fmt.Println(writeError)
 	fmt.Println(result)
+
+	data.Test()
 }
