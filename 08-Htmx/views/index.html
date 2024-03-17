@@ -8,14 +8,26 @@
     <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="count">
-      {{ template "count" .}}
-    </div>
-    <button hx-target="#count" hx-post="/count">Count</button>
+    {{ template "form" .}}
+    <hr />
+    {{ template "display" .}}
   </body>
 </html>
 {{ end }}
 
-{{ block "count" .}}
-  Count {{ .Count }}
+{{ block "form" .}}
+<form hx-post="/contacts">
+  name: <input type="text" name="name"/>
+  email: <input type="text" name="email"/>
+  <button type="submit">Craete Contact</button>
+</form>
+{{ end }}
+
+{{ block "display" .}}
+{{ range .Contacts }}
+  <div >
+    Name: <span> {{ .Name }} </span>
+    Email: <span> {{ .Email }} </span>
+  </div>
+{{ end }}
 {{ end }}
