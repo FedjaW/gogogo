@@ -47,3 +47,12 @@ https://objective-see.org/products/lulu.html
 Go is a binary, running a go app `go run .` will build a new app everytime in a temp directory.
 From the os pov it is always a new app.
 So if this app will make a call to the network lulu will pop up and ask for permission. Even if you allow it, next time it will aks again because it is a new app.... hahaha oh boy, isnt't dev sexy
+
+# Dear future me - Weather
+
+Today's date is `March 17th, 2024`. You find yourself at home on a serene Sunday, engrossed in programming with `Go`. Following an engaging course spanning approximately 8 hours. Despite the weather forecast predicting otherwise, the sun graces the day with its warm presence.
+
+According to wetter.com:\
+Wetter\
+Sonntag, 14:00\
+Stark bewölkt
