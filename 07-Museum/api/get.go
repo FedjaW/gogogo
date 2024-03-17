@@ -9,7 +9,12 @@ import (
 )
 
 func Get(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Unsupported Method ", http.StatusMethodNotAllowed)
+	}
+
 	w.Header().Set("Contenct-Type", "application/json")
+
 	// api/exhibitions?id=42
 	id := r.URL.Query()["id"] // query returns a map
 	if id != nil {
