@@ -13,6 +13,8 @@ func main() {
 	for _, currency := range currencies {
 		wg.Add(1)
 		go func(currencyCode string) {
+			// can do instead calling it later, but will keep it as is for learning purpose
+			// defer wg.Done()
 			getCurrencyData(currencyCode)
 
 			// go supports closures
