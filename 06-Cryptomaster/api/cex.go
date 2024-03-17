@@ -13,6 +13,10 @@ import (
 const apiUrl = "https://cex.io/api/ticker/%s/EUR" // weird or no? We have a const but we set some value dynamically... WTF???
 
 func GetRate(currency string) (*datatypes.Rate, error) {
+	if len(currency) != 3 {
+		return nil, fmt.Errorf("3 characters are required: %d received", len(currency))
+	}
+
 	upperCaseCurrency := strings.ToUpper(currency) // strings is a package and a string variable has no methods because it is no struct (remember: do not say object because there are not objects in go!), so you can not do: mystring.ToUpper
 	// ToUpper is a fuction here ^
 
