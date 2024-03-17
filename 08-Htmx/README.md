@@ -23,3 +23,15 @@ needed https://github.com/cosmtrek/air :
 basis for all:
 
 git clone git@github.com:ThePrimeagen/fem-htmx-proj.git
+
+## run air
+
+on my mac run:
+
+`/Users/fedjabilms/go/bin/air`
+
+open localhost:42069
+
+## run without air
+
+`go run cmd/main.go`
