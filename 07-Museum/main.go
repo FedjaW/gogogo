@@ -5,6 +5,7 @@ import (
 	"html/template"
 	"net/http"
 
+	"leckomio.dev/go/museum/api"
 	"leckomio.dev/go/museum/data"
 )
 
@@ -20,13 +21,14 @@ func handleTemplate(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Internal Server Error"))
 		return
 	}
-	htmlTemplate.Execute(w, data.GetAll()[0])
+	htmlTemplate.Execute(w, data.GetAll())
 }
 
 func main() {
 	server := http.NewServeMux()
 	server.HandleFunc("/hello", handleHello) // passing a func as an argument, not executing handleHello()
 	server.HandleFunc("/template", handleTemplate)
+	server.HandleFunc("/api/exhibitions", api.Get)
 
 	fs := http.FileServer(http.Dir("./public"))
 	server.Handle("/", fs) // Handle takes a type, therefor nor HandleFunc
