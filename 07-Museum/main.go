@@ -2,15 +2,29 @@ package main
 
 import (
 	"fmt"
+	"html/template"
 	"net/http"
 )
 
 func handleHello(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Hello from go"))
 }
+
+func handleTemplate(w http.ResponseWriter, r *http.Request) {
+	htmlTemplate, err := template.ParseFiles("templates/index.tmpl")
+	// template.Must()
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError) // set http status before write to the body, http works like a buffer, can not change status after body
+		w.Write([]byte("Internal Server Error"))
+		return
+	}
+	htmlTemplate.Execute(w, "Test")
+}
+
 func main() {
 	server := http.NewServeMux()
 	server.HandleFunc("/hello", handleHello) // passing a func as an argument, not executing handleHello()
+	server.HandleFunc("/template", handleTemplate)
 
 	fs := http.FileServer(http.Dir("./public"))
 	server.Handle("/", fs) // Handle takes a type, therefor nor HandleFunc
