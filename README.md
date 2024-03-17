@@ -79,3 +79,13 @@ Stark bewölkt
 **Candy**
 
 If you're transferring `less than 1500 bytes` over the network (http), it's all the same, right? That's called the `TCP packet`. That's the `MTU`,  the `maximum transmission unit`. So, whether you're transferring `one byte or 1499, it's pretty much all the same`.
+
+To find process running on a port
+
+`lsof -i tcp:3000`
+
+kill process 
+
+`kill -9 <PID>`
+
+note: -9 kills the process immediately, and gives it no chance of cleaning up after itself. This may cause problems. Consider using -15 (TERM) or -3 (QUIT) for a softer termination which allows the process to clean up after itself.
