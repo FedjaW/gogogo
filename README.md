@@ -10,6 +10,23 @@ gooooooooooooooo
 
 `go run .`
 
+**Build**
+
+Will build for your operating system that you are on
+
+`go build .`
+
+Will build for other operating system
+
+`env GOOS=target-OS`\
+`env GOARCH=target-architecture go build. `
+
+**Install**
+
+will install your go app to be used from everywhere
+
+`go install .`
+
 **Structure of go**
 Workspaces -> Modules -> Packaged
 Workspace are optional
@@ -52,7 +69,8 @@ So if this app will make a call to the network lulu will pop up and ask for perm
 
 Today's date is `March 17th, 2024`. You find yourself at home on a serene Sunday, engrossed in programming with `Go`. Following an engaging course spanning approximately 8 hours. Despite the weather forecast predicting otherwise, the sun graces the day with its warm presence.
 
-According to wetter.com:\
+According to wetter.com:
+
 Wetter\
-Sonntag, 14:00\
+Sonntag, 14:00 Uhr\
 Stark bewölkt
