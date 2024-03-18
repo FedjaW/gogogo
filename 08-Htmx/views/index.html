@@ -49,10 +49,22 @@
 {{ block "display" .}}
 <div id="contacts">
 {{ range .Contacts }}
-  <div >
+  {{ template "contact" . }}
+{{ end }}
+
+</div>
+{{ end }}
+
+{{ block "contact" .}}
+  <div>
     Name: <span> {{ .Name }} </span>
     Email: <span> {{ .Email }} </span>
   </div>
 {{ end }}
-</div>
+
+{{ block "oob-contact" .}}
+
+  <div hx-swap-oob="afterbegin" id="contacts">
+  {{ template "contact" . }}
+  </div>
 {{ end }}

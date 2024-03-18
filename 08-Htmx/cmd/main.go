@@ -104,14 +104,12 @@ func main() {
 			return c.Render(422, "form", formData)
 		}
 
-		page.Data.Contacts = append(page.Data.Contacts, newContact(name, email))
+		contact := newContact(name, email)
+		page.Data.Contacts = append(page.Data.Contacts, contact)
 
-		return c.Render(200, "display", page)
+		c.Render(200, "form", newFormData())
+		return c.Render(200, "oob-contact", contact)
 	})
 
 	e.Logger.Fatal(e.Start(":42069"))
 }
-
-// TOOD: there is a bug in the code. creating a new contact will lead to 500
-// "display\" at \u003c.Contacts\u003e: can't evaluate field Contacts
-// to lazy fo find the bug, because it is sunday 23 o'clock
