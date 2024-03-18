@@ -89,3 +89,7 @@ kill process
 `kill -9 <PID>`
 
 note: -9 kills the process immediately, and gives it no chance of cleaning up after itself. This may cause problems. Consider using -15 (TERM) or -3 (QUIT) for a softer termination which allows the process to clean up after itself.
+
+**Some read about REST**
+
+https://steveklabnik.com/writing/some-people-understand-rest-and-http
