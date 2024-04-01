@@ -1,6 +1,9 @@
 package main
 
-func BubbleSort(a []float32) []float32 {
+func BubbleSort(array []float32) []float32 {
+	a := make([]float32, len(array))
+	copy(a, array)
+
 	for j := 0; j < len(a)-1; j++ {
 		for i := 0; i < len(a)-1-j; i++ {
 			if a[i] > a[i+1] {
