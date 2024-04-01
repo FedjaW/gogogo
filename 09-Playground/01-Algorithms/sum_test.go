@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func Sum_PositiveNumbers(t *testing.T) {
+func Test_Sum_PositiveNumbers(t *testing.T) {
 	// arrange
 	numbers := []float32{5, 3, 99, 3}
 
@@ -15,7 +15,7 @@ func Sum_PositiveNumbers(t *testing.T) {
 	}
 }
 
-func Sum_PositivAndNegativeNumbers(t *testing.T) {
+func Test_Sum_PositivAndNegativeNumbers(t *testing.T) {
 	// arrange
 	numbers := []float32{-5, 3, -99, 3}
 
@@ -28,7 +28,7 @@ func Sum_PositivAndNegativeNumbers(t *testing.T) {
 	}
 }
 
-func Sum_FloatNumbers(t *testing.T) {
+func Test_Sum_FloatNumbers(t *testing.T) {
 	// arrange
 	numbers := []float32{3.2, 2.3, 19, 0.3, 0.7}
 
