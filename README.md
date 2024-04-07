@@ -59,7 +59,7 @@ To avoid deadlocks you have to close the channels before ending the program with
 USE LULU! It is a firewall that will protect you.
 https://objective-see.org/products/lulu.html
 
-**Biray**
+**Binary**
 
 Go is a binary, running a go app `go run .` will build a new app everytime in a temp directory.
 From the os pov it is always a new app.
